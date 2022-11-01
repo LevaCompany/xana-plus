@@ -20,81 +20,13 @@ using System.Media;
 
 namespace xanac
 {
-	class Program
+	class Program 
 	{
 		public static string path;
         public static List<string> vars;
         public static bool logs;
         public static string logf;
 		
-        
-		public static void Main(string[] args)
-		{
-			vars = new List<string>
-            {
-            	"curdir=" + Environment.CurrentDirectory,
-            	"sysdir=" + Environment.SystemDirectory,
-            	"machinename=" + Environment.MachineName,
-            	"username=" + Environment.UserName,
-            	"osver=" + Environment.OSVersion,
-            	""
-            };
-			
-			bool have = false;
-            foreach(string l in args)
-            {
-            	string s = l;
-            	if(!have)
-            	{
-            		if(s.StartsWith("file:"))
-            		{
-            			s = s.Remove(0, 5);
-	            		if(File.Exists(s))
-	            		{
-		        			path = s;
-		        			have = true;
-	            		}
-	            		else
-	            		{
-	            			Console.WriteLine("Not found file " + s);
-	            			Console.ReadKey();
-        					Environment.Exit(0);
-	            		}
-	            		break;
-            		}
-            		else if(s == "ver")
-            		{
-            			Console.WriteLine("Xana by ix4Software");
-            			Console.ReadKey();
-    					Environment.Exit(0);
-            		}
-            		else
-            		{
-            			Console.WriteLine("Wrong argument " + s);
-            			Console.ReadKey();
-    					Environment.Exit(0);
-            		}
-            	}
-            }
-            if(!have)
-            {
-	            if(File.Exists("main.x"))
-	        		path = "main.x";
-	        	else
-	        	{
-	        		Console.WriteLine("Not found main.x");
-	            	Console.ReadKey();
-	        		Environment.Exit(0);
-	        	}
-            }
-
-            //other
-            logs = false;
-            logf = "logs.txt";
-            
-            // Вызываем основной метод
-            oth();
-		}
 		
 		[STAThread]
 		public static void oth()

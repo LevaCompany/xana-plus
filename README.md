@@ -1,5 +1,5 @@
 # xana-x | xana eXtended
-Это форк ЯП Xana от InnieSharp с моими ~~недо~~улучшениями
+Это форк ЯП Xana от InnieSharp с моими ~~недо~~улучшениями <br>
 Его синтаксис чем-то напоминает синтаксис INI-файла
 
 ## Hello, World
