@@ -1,6 +1,0 @@
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\obj\Debug\xanac.csprojResolveAssemblyReference.cache
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\bin\Debug\xanac.exe.config
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\bin\Debug\xanac.exe
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\bin\Debug\xanac.pdb
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\obj\Debug\xanac.exe
-C:\Users\inniesharp\Documents\SharpDevelop Projects\xanac\xanac\obj\Debug\xanac.pdb

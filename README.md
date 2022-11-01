@@ -1,6 +1,27 @@
-# Xana
-Xana is open-source language created on C#.
-Our task was to make a programming language similar to Batch.
-The language is designed to create various scripts.
-The code was written in such a way that it was both understandable and more or less comfortable to analyze.
-If you have questions about the programming language - inniesharpsoftware@gmail.com
+# xana-x | xana eXtended
+Это форк ЯП Xana от InnieSharp с моими ~~недо~~улучшениями
+Его синтаксис чем-то напоминает синтаксис INI-файла
+
+## Hello, World
+```ini
+print "Hello, World"
+```
+
+Или, даже вот так:
+```ini
+[main]
+hello = "Hello, World"
+print hello
+```
+
+## Фичи
+- Простой синтаксис (разберется даже ребенок)
+- Много хаЦкерских функций (ого)
+- И много багов...
+
+## TODO:
+- [ ] Улучшение существующего кода
+- [ ] Лексический анализатор (lexer)
+- [ ] Синтаксический анализатор (parser)
+- [ ] Семантический анализатор
+- [ ] Документация
