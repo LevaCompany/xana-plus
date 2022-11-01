@@ -44,7 +44,7 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>xanac.XanaMain</StartupObject>
+    <StartupObject>xanac.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp">
@@ -66,18 +66,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="debug\ErrorCode.cs" />
-    <Compile Include="debug\Logger.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Debug\ErrorCode.cs" />
+    <Compile Include="Debug\Logger.cs" />
+    <Compile Include="_Deprecated.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XanaMain.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="app.manifest" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="lexer\" />
+    <Folder Include="Lexer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
