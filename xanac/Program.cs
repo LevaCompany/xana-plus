@@ -72,10 +72,10 @@ namespace xanac
         {
             Console.WriteLine("Использование: xanac [args..] [название файла]" + EXT);
             Console.WriteLine("Аргументы:");
-            Console.WriteLine("  -h         Показать помощь xanac");
-            Console.WriteLine("  --help     Показать помощь xanac");
-            Console.WriteLine("  -v         Показать версию xanac");
-            Console.WriteLine("  --version  Показать версию xanac");
+            Console.WriteLine("  -h         Показать помощь Xana+");
+            Console.WriteLine("  --help     Показать помощь Xana+");
+            Console.WriteLine("  -v         Показать версию Xana+");
+            Console.WriteLine("  --version  Показать версию Xana+");
             Console.WriteLine("  --no-warn  Отключить предупреждения");
         }
     }
