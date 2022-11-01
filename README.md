@@ -1,11 +1,12 @@
-# xana-x
+<div align="center">
+<img src="./images/logo.svg" width="25%" height="25%" align="center">
+<h1>xana-x</h1>
 
-<img src="./images/logo.svg" width="120" height="25%" style="float: left; padding-right: 20px">
 
-<p style="padding-top: 5px">
-Это форк ЯП <a href="https://github.com/InnieSharpSoftware/Xana">Xana</a> от InnieSharp
-с моими <strike>недо</strike>улучшениями <br> Его синтаксис чем-то напоминает синтаксис INI-файла
-</p>
+Это форк ЯП [Xana](https://github.com/InnieSharpSoftware/Xana) от InnieSharp
+с моими ~~недо~~улучшениями <br> Его синтаксис чем-то напоминает синтаксис INI-файла :thinking:
+
+</div>
 
 <br>
 
@@ -24,6 +25,7 @@ print hello
 ## Фичи
 - Простой синтаксис (разберется даже ребенок)
 - Много хаЦкерских функций (ого)
+- Качественный говнокод
 - И много багов...
 
 ## TODO:
