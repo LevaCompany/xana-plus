@@ -39,7 +39,7 @@ namespace xanac
 
                     case "-v":
                     case "--version":
-                        Console.WriteLine("Xana-X v" + VERSION);
+                        Console.WriteLine("Xana+ v" + VERSION);
                         return true;
                 }
             }
