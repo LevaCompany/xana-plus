@@ -3,8 +3,9 @@
     internal enum ErrorCode
     {
         NoArgs = 0,
-        WrongEx = 1,
-        NoExists = 2
+        NoInput = 1,
+        NoExists = 2,
+        UnkArg = 3
     }
 
     internal static class ErrorCodeMethods
@@ -15,10 +16,12 @@
             {
                 case ErrorCode.NoArgs:
                     return "Нет аргументов";
-                case ErrorCode.WrongEx:
-                    return "Не верное расширение файла.";
+                case ErrorCode.NoInput:
+                    return "Вы не указали файл на вход";
                 case ErrorCode.NoExists:
                     return "Файл не существует";
+                case ErrorCode.UnkArg:
+                    return "Неизвестный аргумент";
             }
 
             return "";

@@ -6,47 +6,77 @@ namespace xanac
     internal class XanaMain
     {
         private const string VERSION = "0.1";
-        private const string EX = ".x";
+        private const string EXT = ".x";
 
         public static void Main(string[] args)
         {
             if (args.Length > 0)
             {
-                string filePath = args[0];
-
-                if (filePath.EndsWith(EX))
+                foreach (string arg in args)
                 {
-                    if (!File.Exists(filePath))
-                    {
-                        Logger.Error(ErrorCode.NoExists);
-                        ShowUsage();
+                    if (CheckArg(arg))
                         return;
-                    }
-
-                    RunScript(File.ReadAllLines(filePath));
-                    return;
                 }
-
-                Logger.Error(ErrorCode.WrongEx);
-                ShowUsage();
-                return;
             }
 
-            Logger.Error(ErrorCode.NoArgs);
-            ShowUsage();
+            Logger.Error(ErrorCode.NoInput);
+        }
+
+        private static bool CheckArg(string argument)
+        {
+            if (argument.StartsWith("-"))
+            {
+                switch (argument)
+                {
+                    case "--no-warn":
+                        Logger.SetNoWarnings(true);
+                        return false;
+
+                    case "-h":
+                    case "--help":
+                        ShowHelp();
+                        return true;
+
+                    case "-v":
+                    case "--version":
+                        Console.WriteLine("Xana-X v" + VERSION);
+                        return true;
+                }
+            }
+
+            if (argument.EndsWith(EXT))
+            {
+                if (!File.Exists(argument))
+                {
+                    Logger.Error(ErrorCode.NoExists);
+                    return true;
+                }
+
+                Logger.SetFileName(argument);
+
+                RunScript(File.ReadAllLines(argument));
+                return true;
+            }
+
+            Logger.Error(ErrorCode.UnkArg, argument);
+            return true;
         }
 
         private static void RunScript(string[] codeLines)
         {
-            // ...
+            foreach (string line in codeLines)
+                Console.WriteLine(line);
         }
 
-        private static void ShowUsage()
+        private static void ShowHelp()
         {
-            Console.WriteLine("Xana-X v" + VERSION);
-            Console.WriteLine("Использование: ");
-            Console.WriteLine("xanac [название файла].x");
-            Console.ReadKey();
+            Console.WriteLine("Использование: xanac [args..] [название файла]" + EXT);
+            Console.WriteLine("Аргументы:");
+            Console.WriteLine("  -h         Показать помощь xanac");
+            Console.WriteLine("  --help     Показать помощь xanac");
+            Console.WriteLine("  -v         Показать версию xanac");
+            Console.WriteLine("  --version  Показать версию xanac");
+            Console.WriteLine("  --no-warn  Отключить предупреждения");
         }
     }
 }

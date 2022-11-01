@@ -66,8 +66,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorCode.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="debug\ErrorCode.cs" />
+    <Compile Include="debug\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XanaMain.cs" />
