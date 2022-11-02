@@ -10,15 +10,15 @@
 
 <br>
 
-## Hello, World
+## Hello, world!
 ```ini
 [main]
-hello = "Hello, World"
+hello = "Hello, world!"
 print hello
 ```
 Или, даже вот так:
 ```ini
-print "Hello, World"
+print "Hello, world!"
 ```
 
 ## Фичи
